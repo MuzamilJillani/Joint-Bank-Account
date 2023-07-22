@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joint Account</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Joint Account</h1>
+    <div>
+        <h3>Create Account</h3>
+        <input type="text" id="otherOwners">
+        <button onclick="createAccount()">Create</button>
+    </div>
+    <div>
+        <h3>Deposit</h3>
+        <input type="number" class="accountId" placeholder="enter account ID">
+        <input type="number" class="amount" placeholder="enter amount (ETH)">
+        <button onclick="deposit()">Deposit</button>
+    </div>
+    <div>
+        <h3>WithDraw Request</h3>
+        <input type="number" class="accountId" placeholder="enter account ID">
+        <input type="number" class="amount" placeholder="enter amount (ETH)">
+        <button onclick="requestWithdraw()">Request</button>
+    </div>
+    <div>
+        <h3>Approve Request</h3>
+        <input type="number" class="accountId" placeholder="enter account ID">
+        <input type="number" class="withdrawId" placeholder="enter withdraw ID">
+        <button onclick="approveRequest()">Approve</button>
+    </div>
+    <div>
+        <h3>WithDraw amount</h3>
+        <input type="number" class="accountId" placeholder="enter account ID">
+        <input type="number" class="withdrawId" placeholder="enter withdraw ID">
+        <button onclick="withdraw()">Withdraw</button>
+    </div>
+    <div>
+        <h3>View Request Approval</h3>
+        <input type="number" class="accountId" placeholder="enter account ID">
+        <input type="number" class="withdrawId" placeholder="enter withdraw ID">
+        <button onclick="viewApproval()">View</button>
+        <p id="approval"></p>
+    </div>
+    <div>
+        <h3>View Account Balance</h3>
+        <input type="number" class="accountId" placeholder="enter account ID">
+        <button onclick="getAccountBalance()">View</button>
+        <p id = "balance"></p>
+    </div>    
+    <div>
+        <h3>View Accounts</h3>
+        <p id="accounts"></p>
+        <button onclick="viewAccounts()">View</button>
+    </div>
+    <div id="events">
+    </div>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+        type="application/javascript"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
